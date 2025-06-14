@@ -33,10 +33,10 @@ const Add = ({ token }) => {
             formData.append("bestseller", bestseller);
             formData.append("sizes", JSON.stringify(sizes));
 
-            image1 && formData.append("image2", image2);
-            image2 && formData.append("image3", image3);
-            image3 && formData.append("image4", image4);
-            image4 && formData.append("image1", image1);
+            image1 && formData.append("image1", image1);
+            image2 && formData.append("image2", image2);
+            image3 && formData.append("image3", image3);
+            image4 && formData.append("image4", image4);
 
             const response = await axios.post(backendUrl + "/api/product/add", formData, { headers: { token } })
 
@@ -148,7 +148,7 @@ const Add = ({ token }) => {
                 <label className='cursor-pointer ' htmlFor="bestseller">Add to bestseller</label>
             </div>
 
-            <button type='submit' className='w-28 py-3 mt-4 bg-black text-white'>Add</button>
+            <button type='submit' className='w-28 py-3 mt-4 bg-black text-white cursor-pointer'>ADD</button>
         </form>
     )
 }
