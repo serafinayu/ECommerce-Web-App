@@ -173,3 +173,29 @@ Add the following folders to the /src folder
 
 - Admin can now add new products by uploading up to 4 images and filling out the product information such as name, description, price, category, subcategory, and available sizes
 - Started working on List page to display all items
+
+# Day 13: [End Timestamp 10:10:21]
+
+### Complete List page and begin connecting backend with frontend
+
+- Complete List page - admin can now view all products on list page and remove them
+- Install `axios` onto the frontend with `npm install axios` to send and receive data from api endpoints
+- Create new files in /backend: /controllers/cartController.js, /middleware/auth.js, /routes/cartRoute.js
+- Add auth.js to authenticate user actions when interacting with the frontend
+- Added .env files to .gitignore
+
+# Day 14: [End Timestamp 11:11:21]
+
+### Update Cart logic for backend and frontend
+
+- Complete Cart page - adjustments to the quantity of items in cart is now updated in the database
+- Work on Place Order page - input fields are not required before proceeding, and the place order button sends cart item info to database
+  - Create new files in /backend: /controllers/orderController.js, /models/orderModel.js, /routes/orderRoute.js
+
+# Day 15: [End Timestamp: 12:03:58]
+
+### Finish Order Page on Frontend. Begin work on Order Page on Admin Panel
+
+- Orders now update and display on order page on frontend
+- Orders now appear in the admin panel
+- Left off building the orders API to update order status on the admin end
