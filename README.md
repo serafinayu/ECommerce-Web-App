@@ -199,3 +199,11 @@ Add the following folders to the /src folder
 - Orders now update and display on order page on frontend
 - Orders now appear in the admin panel
 - Left off building the orders API to update order status on the admin end
+
+# Day 16: [End Timestamp: 13:32:41]
+
+### Complete Project: Finish Order Page on Admin Panel, Complete Stripe payment method, and Deploy to Vercel
+
+- Stripe payment verification logic completed, however, it is not a secure method to verify the payment. Proper verification would use web hooks to verify, but the process is much longer to develop.
+- Decided to not use Razorpay since it is based in India - uninstalled it from backend `npm uninstall razorpay`
+- Created vercel.json files for /admin, /backend, and /frontend to deploy to Vercel
