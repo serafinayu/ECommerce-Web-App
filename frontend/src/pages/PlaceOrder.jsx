@@ -3,6 +3,8 @@ import Title from '../components/Title'
 import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
+import axios from "axios"
+import { toast } from 'react-toastify'
 
 const PlaceOrder = () => {
 
@@ -36,7 +38,7 @@ const PlaceOrder = () => {
       for (const items in cartItems) {
         for (const item in cartItems[items]) {
           if (cartItems[items][item] > 0) {
-            const itemInfo = structuredClone(products.find(product => { product._id === items }));
+            const itemInfo = structuredClone(products.find(product => product._id === items ));
             if (itemInfo) {
               itemInfo.size = item;
               itemInfo.quantity = cartItems[items][item];
@@ -45,9 +47,36 @@ const PlaceOrder = () => {
           }
         }
       }
-      console.log(orderItems);
-    } catch (error) {
+      
+      let orderData = {
+        address: formData,
+        items: orderItems,
+        amount: getCartAmount() + delivery_fee
+      }
 
+      switch (method) {
+
+        // API calls for COD
+        case 'cod': {
+          const response = await axios.post(backendUrl + "/api/order/place", orderData, {headers: { token }});
+
+          if (response.data.success) {
+            setCartItems({});
+            navigate("/orders");
+            console.log()
+          } else {
+            toast.error(response.data.message);
+          }
+          break;
+        }
+        default:
+          break;
+      }
+
+
+    } catch (error) {
+        console.log(error);
+        toast.error(error.message);
     }
     navigate('/orders');
   }

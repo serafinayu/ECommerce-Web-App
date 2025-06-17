@@ -1,11 +1,40 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from '../components/Title';
+import axios from 'axios';
 
 const Orders = () => {
   
-  const { products, currency } = useContext(ShopContext);
+  const { backendUrl, token, products, currency } = useContext(ShopContext);
 
+  const [orderData, setOrderData] = useState([]);
+
+  const loadOrderData = async () => {
+    try {
+      
+      if (!token) {
+        return null
+      }
+
+      const response = await axios.post(backendUrl + '/api/order/userorders', {}, {headers: {token}});
+      console.log(response.data.orders);
+      if (response.data.success) {
+        let allOrderItem = [];
+        response.data.orders.map((order)=> {
+          order.items.map((item)=>{
+
+          })
+        })
+      }
+
+    } catch (error) {
+      console.log(error); 
+    }
+  }
+
+  useEffect(()=> {
+    loadOrderData();
+  }, [token])
 
   return (
     <div className='border-t border-gray-300 pt-16'>
@@ -16,7 +45,7 @@ const Orders = () => {
 
       <div>
         {
-          products.slice(1, 4).map((item, index)=>(
+          orderData.map((item, index)=>(
             <div key={index} className='py-4 border-t border-b border-gray-300 text-gray-700 flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
               <div className='flex items-start gap-6 text-sm'>
                 <img src={item.image[0]} className="w-16 sm:w-20" />
