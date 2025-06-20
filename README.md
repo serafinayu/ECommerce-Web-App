@@ -1,5 +1,14 @@
 <h1 align="center"> E-Commerce Web App</h1>
 
+<br>
+
+<p align="center">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3RkcWI0cnFrYTc3MWwyZHpqNXNzOGV4c3Q3eDF0cXNodzc0OWk0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2TxUQf2SpqgJ28EkVm/giphy.gif">
+</p>
+<p align="center">A full-stack e-commerce web application with a custom admin dashboard, featuring product management, secure checkout, and responsive design built with React, Node.js, Express, and MongoDB.</p>
+
+<br>
+
 <p align="center">
   <img src="https://img.shields.io/badge/react-19.1.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/vite-6.3.5-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
@@ -11,18 +20,32 @@
   <img src="https://img.shields.io/badge/stripe-payments-635bff?style=for-the-badge&logo=stripe&logoColor=white" />
 </p>
 
+<br>
 
 <h2>Table of Contents</h2>
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
-</p>
+<ul>
+  <li><a href="#key-features">Key Features</a></li>
+  <li><a href="#project-structure">Project Structure</a></li>
+  <li><a href="#dependencies">Dependencies</a></li>
+  <li><a href="#installation-instructions">Installation Instructions</a></li>
+  <li><a href="#credits">Credits</li>
+</ul>
+
+<br>
 
 <h2>Key Features</h2>
+
+<ul>
+  <li>Full-featured e-commerce experience with product browsing, search, and filtering</li>
+  <li>User authentication with protected routes using JSON Web Tokens (JWT)</li>
+  <li>Secure checkout with Stripe integration for real-time payment processing</li>
+  <li>Cloud image upload and storage via Cloudinary</li>
+  <li>Admin dashboard for managing products, orders, and users</li>
+  <li>Fast and responsive UI built with React, Vite, and Tailwind CSS</li>
+  <li>RESTful API powered by Express and MongoDB</li>
+</ul>
+
+<br>
 
 <h2>Project Structure</h2>
 
@@ -32,6 +55,9 @@ ECommerce-Web-App/
 ├── backend/        → REST API server
 ├── admin/          → Admin panel interface
 ```
+
+<br>
+
 <h2>Dependencies</h2>
 
 <h4>Frontend and Admin Panel</h4>
@@ -52,47 +78,71 @@ ECommerce-Web-App/
   <li>Dev: <code>nodemon</code></li>
 </ul>
 
-## Installation and Deployment to Vercel Instructions
+<br>
 
-<h4>Prerequisites</h4>
-<ul>
-  <li>Node.js (v18+)</li>
-  <li>npm</li>
-  <li>MongoDB (local or Atlas)</li>
-  <li>Stripe Account (with API keys)</li>
-  <li>Cloudinary Account (for image uploads)</li> 
-</ul>
+<h2>Installation Instructions</h2>
 
-<h4>Environment Variables</h4>
-Set the following environment variables when deploying to Vercel
+<details open>
+  <summary>Prerequisites</summary>
+  <br>
+  Ensure you have the following installed or created for the web app to work!
+  <br>
+  <br>
+  <ul>
+    <li>Node.js (v18+)</li>
+    <li>npm</li>
+    <li>MongoDB Account</li>
+    <li>Stripe Account (with API keys)</li>
+    <li>Cloudinary Account (for image uploads)</li> 
+  </ul>
+  <br>
+</details>
 
-Frontend:
+<details open>
+  <summary>Install Dependencies</summary>
+  <br>
+  <p>Use <code>npm i</code> in each of these folders: <code>/frontend</code>, <code>/backend</code>, <code>/admin</code></p>
+  <br>
+</details>
 
-```
-VITE_BACKEND_URL="your_backend_vercel_url"
-```
+<details open>
+  <summary>Set Environment Variables</summary>
+  <br>
+  <li>Create a .env file and set the environment variables for each of these folders: <code>/frontend</code>, <code>/backend</code>, <code>/admin</code> </li>
+  
+  <br>
+  Frontend:
+  
+  ```
+  VITE_BACKEND_URL="your_backend_vercel_url"
+  ```
+  
+  Backend:
+  
+  ```
+  PORT=5000
+  MONGO_URI=your_mongodb_uri
+  JWT_SECRET=your_jwt_secret
+  STRIPE_SECRET_KEY=your_stripe_secret_key
+  CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+  CLOUDINARY_API_KEY=your_cloudinary_api_key
+  CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+  ```
+  
+  Admin:
+  ```
+  VITE_BACKEND_URL="your_backend_vercel_url"
+  ```
+<br>
+</details>
 
-Backend:
+<details open>
+  <summary>Run the Web App</summary>
+  <br>
+  <li>Run <code>npm run dev</code> in both the <code>/frontend</code> and <code>/admin</code> directories</li>
+  <li>Run <code>npm run server</code> in the <code>/backend</code> directory</li>
+<br>
+<br>
 
-```
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-STRIPE_SECRET_KEY=your_stripe_secret_key
-CLOUDINARY_CLOUD_NAME=your_cloudinary_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-```
-
-Admin:
-```
-VITE_BACKEND_URL="your_backend_vercel_url"
-```
-
-<h4>Install Dependencies</h4>
-- Use npm install in each of the following directories: /frontend, /backend, /admin
-
-
-
-### Credits
-This project is based on GreatStack's E-Commerce MERN app tutorial
+<h2>Credits</h2>
+This project is based on GreatStack's [E-Commerce MERN app](https://youtu.be/7E6um7NGmeE?si=R1G81SyC0ZcBYluW) tutorial
