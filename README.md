@@ -147,6 +147,7 @@ ECommerce-Web-App/
   <li>Run <code>npm run server</code> in the <code>/backend</code> directory</li>
 <br>
 <br>
+</details>
 
 <h2>Credits</h2>
 This project is based on GreatStack's [E-Commerce MERN app](https://youtu.be/7E6um7NGmeE?si=R1G81SyC0ZcBYluW) tutorial
