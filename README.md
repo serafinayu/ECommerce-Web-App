@@ -112,7 +112,7 @@ ECommerce-Web-App/
 <details open>
   <summary>Set Environment Variables</summary>
   <br>
-  <li>Create a .env file and set the environment variables for each of these folders: <code>/frontend</code>, <code>/backend</code>, <code>/admin</code> </li>
+  <li>Create a <code>.env</code> file and set the environment variables for each of these folders: <code>/frontend</code>, <code>/backend</code>, <code>/admin</code> </li>
   
   <br>
   Frontend:
@@ -150,4 +150,4 @@ ECommerce-Web-App/
 </details>
 
 <h2>Credits</h2>
-This project is based on GreatStack's [E-Commerce MERN app](https://youtu.be/7E6um7NGmeE?si=R1G81SyC0ZcBYluW) tutorial
+<p>This project is based on GreatStack's <a href="https://youtu.be/7E6um7NGmeE?si=R1G81SyC0ZcBYluW">E-Commerce MERN app</a> tutorial</p>
