@@ -6,7 +6,7 @@
 <br>
 
 <p align="center">
-  <a href="https://froever-frontend-kappa.vercel.app/"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3RkcWI0cnFrYTc3MWwyZHpqNXNzOGV4c3Q3eDF0cXNodzc0OWk0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2TxUQf2SpqgJ28EkVm/giphy.gif"></a>
+  <a href="https://forever-sy.vercel.app/"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3RkcWI0cnFrYTc3MWwyZHpqNXNzOGV4c3Q3eDF0cXNodzc0OWk0dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2TxUQf2SpqgJ28EkVm/giphy.gif"></a>
 </p>
 
 <p align="center">A full-stack e-commerce web application with a custom admin dashboard, featuring product management, secure checkout, and responsive design built with React, Node.js, Express, and MongoDB.</p>
